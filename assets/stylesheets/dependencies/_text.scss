@@ -1,0 +1,52 @@
+//=== Colors
+.cp {
+  color: $primary!important;
+}
+
+.cs {
+  color: $secondary!important;
+}
+
+.ct {
+  color: $tertiary!important;
+}
+
+//=== Title
+h1 {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+//=== a, p, span and others
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-roboto;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 0;
+}
+

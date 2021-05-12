@@ -1,0 +1,143 @@
+.expoList {
+
+  #searchbar {
+    padding: 0 15px;
+
+    button {
+      border-radius: 0;
+      border-color: $tertiary;
+      color: $tertiary;
+
+      &:hover {
+        color: $white;
+        background-color: $tertiary;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include out-mobile {
+      justify-content: flex-start;
+    }
+  }
+
+  .expoCard {
+    position: relative;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+    max-width: 300px;
+
+    @include out-mobile {
+      margin: 0 1%;
+      max-width: none;
+
+      &.col-sm-6 {
+        width: 48%;
+      }
+    }
+
+    @include tablet {
+      margin: 0 1%;
+
+      &.col-md-4 {
+        width: 31%;
+      }
+    }
+
+    @include laptop {
+      margin: 0 1%;
+
+      &.col-lg-3 {
+        width: 23%;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 135%;
+
+      @include out-mobile{
+        padding-bottom: 150%;
+      }
+    }
+
+    h6 {
+      position: relative;
+      font-size: 22px;
+      padding-bottom: 15px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0; left: 25%;
+        background-color: white;
+        width: 50%;
+        height: 2px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .expo {
+    color: $white;
+    position: absolute;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    max-height: 375px;
+    padding: 15px;
+    border-radius: 16px;
+
+    @include computer {
+      max-height: 425px;
+    }
+
+    .expoTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .expoLink {
+      height: 100%;
+      min-width: 25px;
+      position: absolute;
+      right: 15px;
+      top: 0;
+      display: flex;
+      align-items: center;
+
+      img {
+        @extend .pointer;
+      }
+    }
+
+    .expoUser {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        padding-right: 5px;
+      }
+    }
+
+    img {
+      max-width: 25px;
+      max-height: 30px;
+    }
+  }
+}

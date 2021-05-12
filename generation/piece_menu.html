@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>EXPOS3D Générer l'exposition</title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/stylesheets/style.css">
+    
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+    <script src="../scripts/gestionOeuvres.js"></script>
+    <script src="../scripts/mursOnLoad.js"></script>
+    <script src="../scripts/mursSVG.js"></script>
+    <script src="../scripts/mursPlan2d.js"></script>
+    
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> 
+    
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+        width: 100%;
+        height: 540px;
+    }
+    
+    td{
+        border: 1px solid rgb(209, 209, 209);
+        text-align: center;
+        color: white;
+        max-width: 0;
+        line-height: 0;
+    }
+
+    a-scene{
+        width: 100%;
+        height: 540px;
+        border: 1px solid black;
+    }
+
+    #steps2{
+        display: none;
+        margin-top: 8em;
+    }
+
+    #steps3{
+        display: none;
+        margin-top: 8em;
+    }
+
+</style>
+<body>
+<header role="banner">
+    <h1 class="title_create">Choisissez votre mode de création</h1>
+    <!-- STEPS -->
+</header>
+
+    <div class="container">
+
+        <div class="container-align">
+        <div class="card_menu">
+            <a class="a-null" href="piece.html">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                            <h3>Plan 2D</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <div class="card_menu">
+                    <a class="a-null" href="piece_SVG.html">
+                        <div class="face face1">
+                            <div class="content">
+                                <img src="../assets/img/svg.png">
+                                <h3>Fichier SVG</h3>
+                            </div>
+                        </div>
+                        <div class="face face2">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                </div>
+
+                <div class="logo_footer_container">
+                    <img id="logo_footer_piece" src="../assets/img/logo-dark.svg">
+                </div>
+
+
+
+    </div>
+
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../scripts/upload.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function(){
+
+            var clicks = 0;
+
+            $('#next').click(function() {
+                if (clicks == 0){
+                         $("#steps2").show();
+                         document.getElementById("steps2").scrollIntoView();
+                } else{
+                         $("#steps3").show();
+                         document.getElementById("steps3").scrollIntoView();
+                }
+                ++clicks;
+            });
+
+
+
+        });
+
+
+        
+            
+    </script>
+    
+
+</body>
+</html>

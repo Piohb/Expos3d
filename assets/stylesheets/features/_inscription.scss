@@ -1,0 +1,89 @@
+.connexion {
+  .nav-item {
+    width: 50%;
+
+    .nav-link {
+      width: 100%;
+    }
+  }
+
+  form {
+    padding: 15px 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+      border-radius: 0;
+      border-color: $tertiary;
+      color: $tertiary;
+      width: 100%;
+      min-height: 40px;
+      height: 100%;
+      border: 2px solid;
+
+      &:hover {
+        color: $white;
+        background-color: $tertiary;
+      }
+    }
+  }
+
+  .form-row {
+    position: relative;
+    padding: 15px 15px 0;
+    //margin-top: 10px;
+    width: 100%;
+
+    &.pwd {
+      width: 50%;
+    }
+  }
+
+  .form-field {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $grey-2;
+    outline: 0;
+    font-size: 1rem;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-bottom: 5px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .form-label {
+      font-size: 1rem;
+      cursor: text;
+      top: 15px;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    color: $grey-2;
+    margin: 0;
+  }
+
+  .form-field:focus {
+    ~ .form-label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $blue;
+      font-weight:700;
+    }
+
+    border-color: $blue;
+  }
+  .form-field{
+    &:required,&:invalid { box-shadow:none; }
+  }
+}
